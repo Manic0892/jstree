@@ -274,7 +274,7 @@
 		 * You can also pass in a HTML string or a JSON array here.
 		 *
 		 * It is possible to pass in a standard jQuery-like AJAX config and jstree will automatically determine if the response is JSON or HTML and use that to populate the tree.
-		 * In addition to the standard jQuery ajax options here you can suppy functions for `data` and `url`, the functions will be run in the current instance's scope and a param will be passed indicating which node is being loaded, the return value of those functions will be used.
+		 * In addition to the standard jQuery ajax options here you can supply functions for `data` and `url`, the functions will be run in the current instance's scope and a param will be passed indicating which node is being loaded, the return value of those functions will be used.
 		 *
 		 * The last option is to specify a function, that function will receive the node being loaded as argument and a second param which is a function which should be called with the result.
 		 *
@@ -4032,7 +4032,7 @@
 				lft = this.element[0].scrollLeft;
 				if(par.id === $.jstree.root) {
 					if (this._model.data[$.jstree.root].children[0]) {
-						this.get_node(this._model.data[$.jstree.root].children[0], true).children('.jstree-anchor').triger('focus');
+						this.get_node(this._model.data[$.jstree.root].children[0], true).children('.jstree-anchor').trigger('focus');
 					}
 				}
 				else {
