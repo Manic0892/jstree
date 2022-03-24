@@ -2585,9 +2585,11 @@
 
 			if(this.settings.core.force_text) {
 				node.childNodes[1].appendChild(d.createTextNode(obj.text));
+				node.childNodes[1].setAttribute("title", obj.text);
 			}
 			else {
 				node.childNodes[1].innerHTML += obj.text;
+				node.childNodes[1].setAttribute("title", obj.text);
 			}
 
 
