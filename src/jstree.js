@@ -930,8 +930,7 @@
 						}
 					}.bind(this))
 				.on('mouseenter.jstree', '.jstree-anchor', function (e) {
-					this.hover_node(e.currentTarget);
-					this.hover_node(e.text);
+						this.hover_node(e.currentTarget);
 					}.bind(this))
 				.on('mouseleave.jstree', '.jstree-anchor', function (e) {
 						this.dehover_node(e.currentTarget);
