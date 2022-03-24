@@ -930,7 +930,8 @@
 						}
 					}.bind(this))
 				.on('mouseenter.jstree', '.jstree-anchor', function (e) {
-						this.hover_node(e.currentTarget);
+					this.hover_node(e.currentTarget);
+					this.hover_node(e.text);
 					}.bind(this))
 				.on('mouseleave.jstree', '.jstree-anchor', function (e) {
 						this.dehover_node(e.currentTarget);
@@ -2585,9 +2586,11 @@
 
 			if(this.settings.core.force_text) {
 				node.childNodes[1].appendChild(d.createTextNode(obj.text));
+				node.childNodes[1].setAttribute("title", obj.text);
 			}
 			else {
 				node.childNodes[1].innerHTML += obj.text;
+				node.childNodes[1].setAttribute("title", obj.text);
 			}
 
 
